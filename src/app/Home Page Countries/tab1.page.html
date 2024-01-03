@@ -1,0 +1,25 @@
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Home Page G00411227
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list *ngFor="let data of post">
+    <ion-item (click)="goToCountryDetail(data.name.official)">
+      <ion-avatar slot="start">
+        <img [src]="data.flags.png">
+      </ion-avatar>
+      <ion-label>
+        <h3>Country: {{ data.name.official }}</h3>
+        <p>Region: {{ data.region }}</p>
+        <p>Capital: {{ data.capital }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+ 
+
